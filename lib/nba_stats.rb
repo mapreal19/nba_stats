@@ -1,5 +1,6 @@
-require "nba_stats/version"
+require 'nba_stats/version'
+require 'nba_stats/base'
+require 'nba_stats/player'
 
 module NbaStats
-  # Your code goes here...
 end
