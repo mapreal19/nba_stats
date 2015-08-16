@@ -1,8 +1,6 @@
 # NbaStats
 [![Build Status](https://travis-ci.org/mapreal19/nba_stats.svg)](https://travis-ci.org/mapreal19/nba_stats)
 
-WIP...
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -19,9 +17,35 @@ Or install it yourself as:
 
     $ gem install nba_stats
 
-## Usage
+## Resources
 
-TODO: Write usage instructions here
+### Player
+
+- Instance
+
+```ruby
+player = NbaStats::Player.new(id: 1717, league_id: '00')
+player.attributes # => {:person_id=>1717, :first_name=>"Dirk", ...}
+```
+
+- All Players
+
+
+```ruby
+NbaStats::Player.all(leagued_id: '00',
+                     season: guess_current_season, 
+                     is_only_current_season: 1)
+```
+
+Returns an array of players from the NBA. 
+
+Examples:
+
+```ruby
+NbaStats::Player.all # => [{:person_id=>203092, :display_last_comma_first=>"Zeller, Tyler", ...}, ...]
+NbaStats::Player.all(league_id: '00', is_only_current_season: 0)
+NbaStats::Player.all(league_id: '00', season: '2014-15', is_only_current_season: 1)
+```
 
 ## Development
 

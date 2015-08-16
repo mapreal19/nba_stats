@@ -5,7 +5,7 @@ describe NbaStats::Base do
   describe 'normalized_headers' do
     it 'returns the header normalized' do
       header = 'TEAM_NAME'
-      normalized_header = subject.send(:normalized_header).call(header)
+      normalized_header = described_class.send(:normalized_header).call(header)
 
       expect(normalized_header).to eq :team_name
     end
@@ -18,7 +18,7 @@ describe NbaStats::Base do
       end
 
       it 'returns the guessed season' do
-        expect(subject.send(:guess_current_season)).to eq '2015-16'
+        expect(described_class.send(:guess_current_season)).to eq '2015-16'
       end
     end
 
@@ -28,7 +28,7 @@ describe NbaStats::Base do
       end
 
       it 'returns the guessed season' do
-        expect(subject.send(:guess_current_season)).to eq '2014-15'
+        expect(described_class.send(:guess_current_season)).to eq '2014-15'
       end
     end
   end

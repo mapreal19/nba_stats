@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stats.nba.com/stats/commonplayerinfo/?LeagueId=00&PlayerID=1717
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Last-Modified:
+      - Sun, 16 Aug 2015 14:22:20 GMT
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Sun, 16 Aug 2015 15:14:16 GMT
+      Date:
+      - Sun, 16 Aug 2015 15:14:16 GMT
+      Content-Length:
+      - '921'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"resource":"commonplayerinfo","parameters":[{"PlayerID":1717},{"LeagueID":"00"}],"resultSets":[{"name":"CommonPlayerInfo","headers":["PERSON_ID","FIRST_NAME","LAST_NAME","DISPLAY_FIRST_LAST","DISPLAY_LAST_COMMA_FIRST","DISPLAY_FI_LAST","BIRTHDATE","SCHOOL","COUNTRY","LAST_AFFILIATION","HEIGHT","WEIGHT","SEASON_EXP","JERSEY","POSITION","ROSTERSTATUS","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CODE","TEAM_CITY","PLAYERCODE","FROM_YEAR","TO_YEAR","DLEAGUE_FLAG"],"rowSet":[[1717,"Dirk","Nowitzki","Dirk
+        Nowitzki","Nowitzki, Dirk","D. Nowitzki","1978-06-19T00:00:00","Wurzburg,
+        Germany","Germany","DJK Wurzburg/Germany","7-0","245",17,"41","Forward","Active",1610612742,"Mavericks","DAL","mavericks","Dallas","dirk_nowitzki","1998","2015","N"]]},{"name":"PlayerHeadlineStats","headers":["PLAYER_ID","PLAYER_NAME","TimeFrame","PTS","AST","REB","PIE"],"rowSet":[[1717,"Dirk
+        Nowitzki","2014-15",17.3,1.9,5.9,0.133]]}]}'
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 22:00:00 GMT
+recorded_with: VCR 2.9.3
