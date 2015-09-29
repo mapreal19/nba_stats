@@ -41,5 +41,9 @@ module NbaStats
 
       Hash[headers.zip(player)]
     end
+    
+    def foo_test
+      2 + 4
+    end
   end
 end
